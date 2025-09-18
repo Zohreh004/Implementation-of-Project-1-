@@ -1,4 +1,4 @@
-#Project_1
+# Project_1
 
 # PageRank Implementation
 
@@ -31,7 +31,7 @@ The code can be executed on **Google Colab** or locally with Python. If addition
 - Hands-on experience with iterative methods (Power Iteration) vs. direct eigenvalue computation.  
 - Insights into how damping factor tuning changes the ranking distribution. 
 --------------------------------------------------------------------------------------------------------------------
-#Project_2
+# Project_2
 # QR Decomposition – Least Squares Classification (EMNIST Letters)
 
 This repository contains an implementation of **QR decomposition–based least squares classification**.
@@ -65,7 +65,7 @@ This project can be run locally or in **Google Colab** using:
 - `scipy` (optional for QR decomposition)
 - `matplotlib` (visualization of results)
 ---------------------------------------------------------------------------------------------------------------------
-#Project_3
+# Project_3
 
----------------------------------------------------------------------------------------------------------------------#Project_4
----------------------------------------------------------------------------------------------------------------------#Final_Project
+---------------------------------------------------------------------------------------------------------------------# Project_4
+---------------------------------------------------------------------------------------------------------------------# Final_Project
