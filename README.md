@@ -30,7 +30,7 @@ The code can be executed on **Google Colab** or locally with Python. If addition
 - Understanding of **Markov Chains** and **Random Walks** as the foundation of PageRank.  
 - Hands-on experience with iterative methods (Power Iteration) vs. direct eigenvalue computation.  
 - Insights into how damping factor tuning changes the ranking distribution. 
---------------------------------------------------------------------------------------------------------------------
+-------------------
 # Project_2
 # QR Decomposition – Least Squares Classification (EMNIST Letters)
 
@@ -64,8 +64,56 @@ This project can be run locally or in **Google Colab** using:
 - `numpy` (linear algebra operations)
 - `scipy` (optional for QR decomposition)
 - `matplotlib` (visualization of results)
----------------------------------------------------------------------------------------------------------------------
+-----------------
 # Project_3
 
----------------------------------------------------------------------------------------------------------------------# Project_4
----------------------------------------------------------------------------------------------------------------------# Final_Project
+# Clustering Analysis with NMF and K-Means
+
+This repository presents a **clustering analysis on the 20 Newsgroups dataset**, focusing on five categories. The project explores **Non-Negative Matrix Factorization (NMF)**, a **custom K-Means implementation**, and **Scikit-learn’s K-Means**.
+
+### Key Steps
+- **Preprocessing:** stopword removal, punctuation/number filtering, tokenization, lowercasing  
+- **Feature Extraction:** TF-IDF Term-Document matrix  
+- **Clustering Methods:** NMF, custom K-Means, Scikit-learn K-Means  
+
+### Results
+- **Best Overall:** Scikit-learn K-Means (highest ARI & AMI)  
+- **Moderate:** NMF (better intra-cluster cohesion)  
+- **Weakest:** Custom K-Means (random centroid initialization issues)  
+- **Challenge:** Low cluster separation in TF-IDF space
+
+-------------
+#  Project_4
+
+This repository contains implementations and analyses for two main tasks:  
+1. **Computing positions of Iranian cities in 2D space using ISOMAP**  
+2. **Dimensionality reduction on the MNIST dataset using PCA and t-SNE**
+
+---
+
+##  Section 1: ISOMAP on Iranian Cities
+- **Goal:** Map Iranian cities into 2D space while preserving geodesic distances.  
+- **Approach:**
+  - Manual ISOMAP implementation with KNN graph, Dijkstra’s algorithm, and MDS  
+  - Scikit-learn’s `Isomap` for comparison  
+- **Findings:**
+  - Both implementations captured geographic structures (e.g., Tabriz, Urmia, Ardabil clustered together).  
+  - Scikit-learn’s version produced smoother and more symmetric embeddings.  
+  - Manual version showed acceptable results but with more distortion in scaling and positions.  
+
+---
+
+##  Section 2: Dimensionality Reduction on MNIST
+- **Dataset:** 70,000 handwritten digit images (28×28 pixels).  
+- **Steps:**
+  - Flattened images into 784-dimensional vectors.  
+  - Applied **PCA** (linear, variance preservation) and **t-SNE** (nonlinear, local structure preservation).  
+  - Evaluated using **Trustworthiness metric** and explored **Perplexity effect** on t-SNE.  
+- **Results:**
+  - **Trustworthiness:** PCA = 0.5170, t-SNE = 0.6744 → t-SNE better preserved local structures.  
+  - **Perplexity Analysis:** Increasing Perplexity lowered KL Divergence.  
+    - Best result at **Perplexity = 50**, KL Divergence ≈ 1.70.  
+- **Conclusion:**  
+  - PCA is efficient but loses neighborhood details.  
+  - t-SNE excels in preserving local structures, especially with optimized Perplexity.  
+---------------
